@@ -4,7 +4,7 @@ const anthropic = new Anthropic({
   apiKey: process.env["ANTHROPIC_API_KEY"], // This is the default and can be omitted
 });
 
-const TEXT_TRANSLATE = `
+const TEXT_TO_TRANSLATE = `
 Stable Diffusion AI is a latent diffusion model for generating AI images. The images can be photorealistic, like those captured by a camera, or in an artistic style as if produced by a professional artist.
                   The best part is that it is free – you can run it on your PC.
                   How to use Stable Diffusion?
@@ -114,7 +114,7 @@ async function* callClaude(input: string) {
 }
 
 // cleanup the input, remove empty line and extra spaces then join
-const input = TEXT_TRANSLATE.split("\n")
+const input = TEXT_TO_TRANSLATE.split("\n")
   .map((line) => line.trim())
   .filter((line) => line)
   .join("\n");
