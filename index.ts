@@ -56,7 +56,7 @@ Stable Diffusion AI is a latent diffusion model for generating AI images. The im
                   Below is an example of transforming my drawing of an apple into a photo-realistic one. (Tutorial)
 `;
 
-const TERMS = [
+const ENGLISH_TERMS = [
   "Stable Diffusion",
   "SD model",
   "Diffuser",
@@ -67,7 +67,7 @@ const TERMS = [
   "Runpod",
 ];
 
-const TERMS_VIETNAMESE_MAP = {
+const VIETNAMESE_TERMS_MAP = {
   txt2img: "tạo hình từ ảnh",
   img2img: "tạo hình từ hình",
   inpainting: "vẽ đè",
@@ -83,10 +83,10 @@ Translation Note:
 - Do not remove or merge sentences, try to keep the number of sentences the same. Separate each sentence with a new line.
 
 Terminologies:
-- Keep these terms in English: ${TERMS.join(", ")}.
+- Keep these terms in English: ${ENGLISH_TERMS.join(", ")}.
 - Translate these terms into Vietnamsese:
 \`\`\`
-${Object.entries(TERMS_VIETNAMESE_MAP)
+${Object.entries(VIETNAMESE_TERMS_MAP)
   .map(([key, value]) => `"${key}"="${value}"`)
   .join("\n")}
 \`\`\`
