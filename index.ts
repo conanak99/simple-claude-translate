@@ -100,6 +100,7 @@ async function* callClaude(input: string) {
     system: systemPrompt,
     messages: [{ role: "user", content: input }],
     temperature: 0.5,
+    //     model: "claude-3-sonnet-20240229" // Cheaper, but not as powerful as opus
     model: "claude-3-opus-20240229",
     stream: true,
   });
